@@ -108,6 +108,7 @@ The Patient Disease Tracking & Analytics System follows a structured workflow fr
 
 **Diagram:** Workflow design with analytics prioritization  
 [Here are the bpmn that highlights the overview of project](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/Diagram/Patient%20Disease%20tracking%20dashboard.png)
+https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/all_screenshoot/Creation%20of%20pdb%201.png
 
 
 # Phase III: Logical Model Design
