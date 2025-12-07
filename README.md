@@ -419,7 +419,7 @@ PDB: WED_27394_ENOCK_PDTAS_DB
 User: patient_track
 Password: humure
 ```
-[Click here to visit Google](https://www.google.com)
+![this is creation of pdb in ](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/all_screenshoot/creation%20of%20connection%20on%20pdb.png)
 ---
 
 **Phase:** IV - Database Creation ✅  
@@ -444,7 +444,7 @@ Verify the successful creation of all database tables, data integrity, and prope
 | `TREATMENT` | Medication and treatment history | 5 |
 | `DISEASE_STATS` | Analytics and disease metrics | 5 |
   
-[Click here to visit Google](https://www.google.com)
+[Proff of creation of pdb](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/all_screenshoot/proff%20of%20the%20tables3.png)
 
 ### **1. Table Existence Check**
 ```sql
@@ -607,7 +607,8 @@ ORDER BY patient_count DESC;
   
 - Screenshot of validation script execution[Click here to visit Google](https://www.google.com)
   
-- Screenshot of sample query results[Click here to visit Google](https://www.google.com)
+-  of sample query results[
+  [ Click here to visit Google](https://www.google.com)
 
 ---
 
@@ -654,6 +655,7 @@ Develop PL/SQL procedures, functions, packages, and implement comprehensive test
 ### **Test 1: `get_patient_treatments` Procedure**
 
 #### **Normal Case - Patient Exists, All Treatments**
+
 ```sql
 SET SERVEROUTPUT ON;
 BEGIN
@@ -793,20 +795,6 @@ LEAD(visit_date) OVER (ORDER BY visit_date) AS next_visit
 - `error_logs_table.sql` - Error logging table creation
 - `phase6_tests.sql` - Complete test script
 - `phase6_validation.sql` - Validation queries
-
-
-### **Screenshots:**
-- Package compilation success
-- [Click here to visit Google](https://www.google.com)
-
-- Test execution 
-[Click here to visit Google](https://www.google.com)
-
-- Error logging verification
-- [Click here to visit Google](https://www.google.com)
-
-- Performance test results
-[Click here to visit Google](https://www.google.com)
 
 
 ---
