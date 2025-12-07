@@ -28,6 +28,7 @@
 | VIII | Final Documentation | GitHub Repo + Presentation |
 
 # **Phase:** Problem Identification
+
 ## 🏥 Project Overview
 
 This is a multi-phase individual capstone project centered on Oracle database design, PL/SQL development, and Business Intelligence implementation. 
@@ -105,7 +106,8 @@ The Patient Disease Tracking & Analytics System follows a structured workflow fr
 
 ---
 
-**Focus:** Workflow design with analytics prioritization  
+**Diagram:** Workflow design with analytics prioritization  
+[Here are the bpmn that highlights the overview of project](https://www.google.com)
 
 
 # Phase III: Logical Model Design
@@ -208,7 +210,11 @@ erDiagram
 2. **Concurrency:** Multiple concurrent users (reception, doctors, lab)
 3. **Retention:** 5+ years of historical data
 4. **Performance:** Sub-second response for dashboard queries
-5. **Security:** Role-based access control (Phase VII)
+5. **Security:** Role-based access control
+   ## 📈 BI  diagram
+   
+[Click here to visit Google](https://www.google.com)
+[Click here to visit Google](https://www.google.com)
 
 
 ## 📊 Schema Summary
@@ -227,9 +233,7 @@ AUDIT READINESS: Audit trail framework defined
 
 ---
 
-**Phase:** III - Logical Model Design  
-**Status:** ✅ Completed   
-**Compliance:** 3NF + BI Optimized  
+
 
   # Phase IV: Database Creation
 
@@ -348,7 +352,8 @@ SELECT file_name, tablespace_name, bytes/1024/1024 as size_mb, autoextensible
 FROM dba_data_files 
 WHERE tablespace_name LIKE 'PDTA%';
 ```
-
+[Click here to visit Google](https://www.google.com)
+[Click here to visit Google](https://www.google.com)
 ## 👥 User Setup Documentation
 
 ### **Administrative User (`enock_admin`)**
@@ -361,25 +366,13 @@ WHERE tablespace_name LIKE 'PDTA%';
 
 ### **Application User (`patient_track`)**
 ```sql
--- Privileges: CONNECT, RESOURCE, DBA (for development)
--- Purpose: Application data operations (Phase V-VII)
+-- Privileges: CONNECT, RESOURCE, DBA 
+-- Purpose: Application data operations 
 -- Default Tablespace: pdta_data
 -- Temporary Tablespace: pdta_temp
 ```
 
 
-## 🔒 Security Considerations
-
-### **Production Recommendations:**
-1. **Password Policy:** Strong passwords (12+ chars, mixed case, numbers, symbols)
-2. **Role Separation:** Application user should not have DBA in production
-3. **Audit Trail:** Enable auditing for admin activities
-4. **Regular Rotation:** Password rotation every 90 days
-
-### **Development Settings:**
-- DBA granted for development flexibility
-- Simple passwords for ease of testing
-- Local environment only (not exposed to network)
 
 ## 📊 Performance Considerations
 
@@ -408,11 +401,6 @@ WHERE tablespace_name LIKE 'PDTA%';
 - [ ] Quotas assigned properly
 - [ ] Connection possible with new users
 
-### **Documentation Complete:**
-- [ ] SQL scripts saved to GitHub
-- [ ] Screenshots captured
-- [ ] README.md updated
-- [ ] All configuration decisions documented
 
 ## ⚠️ Known Limitations & Workarounds
 
@@ -440,7 +428,7 @@ PDB: WED_27394_ENOCK_PDTAS_DB
 User: patient_track
 Password: humure
 ```
-
+[Click here to visit Google](https://www.google.com)
 ---
 
 **Phase:** IV - Database Creation  
@@ -573,7 +561,7 @@ JOIN treatment t ON r.patient_id = t.patient_id;
 SELECT disease_name, COUNT(*) AS patient_count
 FROM reception
 GROUP BY disease_name;
-
+ 
 -- Expected: 5 rows, one for each main disease with patient counts
 ```
 
@@ -633,14 +621,16 @@ ORDER BY patient_count DESC;
 
 ### **Expected Output Files:**
 - Screenshot of table creation success
+  
 - Screenshot of data insertion results
+  
 - Screenshot of validation script execution
+  
 - Screenshot of sample query results
 
 ---
 
 **Phase:** V - Table Implementation & Data Insertion  
-**Status:** ✅ Completed  
 **Database:** WED_27394_ENOCK_PDTAS_DB  
 **User:** patient_track
 
@@ -851,22 +841,17 @@ LEAD(visit_date) OVER (ORDER BY visit_date) AS next_visit
 
 ### **Screenshots:**
 - Package compilation success
-- Test execution results
+- [Click here to visit Google](https://www.google.com)
+
+- Test execution 
+[Click here to visit Google](https://www.google.com)
+
 - Error logging verification
+- [Click here to visit Google](https://www.google.com)
+
 - Performance test results
+[Click here to visit Google](https://www.google.com)
 
----
-
-**Phase:** VI - PL/SQL Development & Testing  
-**Status:** ✅ Completed  
-**Database:** WED_27394_ENOCK_PDTAS_DB  
-**User:** patient_track  
-**Next Phase:** VII - Advanced Programming & Auditing
-
-
-Alright **coach**, here is a **clean, well-explained Phase VII** written exactly the way your lecturer expects.
-No confusion. No missing steps. No errors.
-Just the **correct Phase VII**, step-by-step, with explanations and SQL/PLSQL code.
 
 ---
 
@@ -878,7 +863,7 @@ These rules ensure that employees **cannot perform DML** on restricted days and 
 
 ---
 
-# ✅ **BUSINESS RULE (CRITICAL REQUIREMENT)**
+# ✅ **BUSINESS RULE **
 
 Employees are NOT allowed to:
 
@@ -911,6 +896,8 @@ CREATE TABLE public_holidays (
     description     VARCHAR2(200)
 );
 ```
+[Click here to visit Google](https://www.google.com)
+
 
 Insert sample holidays:
 
@@ -921,6 +908,7 @@ VALUES (DATE '2025-01-01', 'New Year');
 INSERT INTO public_holidays (holiday_date, description)
 VALUES (DATE '2025-01-03', 'National Health Day');
 ```
+[Click here to visit Google](https://www.google.com)
 
 ---
 
@@ -942,6 +930,8 @@ CREATE TABLE audit_log (
     sql_text        VARCHAR2(4000)
 );
 ```
+[Click here to visit Google](https://www.google.com)
+
 
 ---
 
@@ -983,6 +973,7 @@ BEGIN
 END;
 /
 ```
+[Click here to visit Google](https://www.google.com)
 
 ---
 
