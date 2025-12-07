@@ -394,13 +394,6 @@ WHERE tablespace_name LIKE 'PDTA%';
 - [ ] Sufficient disk space (minimum 1GB free)
 - [ ] Backup of existing databases if any
 
-### **Post-Creation Verification:**
-- [ ] PDB created and in OPEN state
-- [ ] All tablespaces created successfully
-- [ ] Users created with correct privileges
-- [ ] Quotas assigned properly
-- [ ] Connection possible with new users
-
 
 ## ⚠️ Known Limitations & Workarounds
 
@@ -411,13 +404,14 @@ WHERE tablespace_name LIKE 'PDTA%';
 | No partitioning | XE feature restriction | Manual data archiving |
 | Single PDB | XE allows 3 PDBs total | Manage PDB count carefully |
 
-## 🚀 Next Phase Preparation
 
-### **Ready for Phase V:**
+
 1. **Database:** PDB created and configured
-2. **Users:** Application user with necessary privileges
-3. **Tablespaces:** Optimized for table creation and data loading
-4. **Documentation:** Complete for submission
+   [Click here to visit Google](https://www.google.com)
+3. **Users:** Application user with necessary privileges
+   [Click here to visit Google](https://www.google.com)
+5. **Tablespaces:** Optimized for table creation and data loading
+   [Click here to visit Google](https://www.google.com)
 
 ### **Connection Details for Phase V:**
 ```
@@ -505,7 +499,7 @@ SELECT COUNT(*) AS disease_stats_count FROM disease_stats;       -- Expected: 5
 
 ## 🔗 Foreign Key Integrity Tests
 
-### **1. Orphan Lab Tests Check**
+### **1.  Lab Tests Check**
 ```sql
 SELECT *
 FROM lab_technician l
@@ -513,17 +507,6 @@ WHERE NOT EXISTS (
     SELECT 1 FROM reception r WHERE r.patient_id = l.patient_id
 );
 ```
-**Expected Result:** 0 rows (no orphan records)
-
-### **2.Treatment Records Check**
-```sql
-SELECT *
-FROM treatment t
-WHERE NOT EXISTS (
-    SELECT 1 FROM reception r WHERE r.patient_id = t.patient_id
-);
-```
-
 **Expected Result:** 0 rows (no orphan records)
 
 ## 📊 Sample Data Queries
@@ -620,13 +603,13 @@ ORDER BY patient_count DESC;
 - `phase5_validation.sql` - This validation script
 
 ### **Expected Output Files:**
-- Screenshot of table creation success
+- Screenshot of table creation success [Click here to visit Google](https://www.google.com)
   
-- Screenshot of data insertion results
+- Screenshot of data insertion results[Click here to visit Google](https://www.google.com)
   
-- Screenshot of validation script execution
+- Screenshot of validation script execution[Click here to visit Google](https://www.google.com)
   
-- Screenshot of sample query results
+- Screenshot of sample query results[Click here to visit Google](https://www.google.com)
 
 ---
 
@@ -803,31 +786,6 @@ LEAD(visit_date) OVER (ORDER BY visit_date) AS next_visit
 - Disease existence verification (main or other)
 - Patient record validation before operations
 
-## ✅ Validation Criteria Met
-
-### **Procedure Requirements:**
-- ✅ 5 procedures developed with IN/OUT parameters
-- ✅ DML operations (INSERT, UPDATE, DELETE) implemented
-- ✅ Exception handling in all procedures
-- ✅ Proper documentation and comments
-
-### **Function Requirements:**
-- ✅ 4 calculation and validation functions
-- ✅ Proper return types and error handling
-- ✅ Business logic integration
-
-### **cursor:**
-- ✅ Explicit cursors with OPEN/FETCH/CLOSE
-- ✅ Window functions (ROW_NUMBER, RANK, DENSE_RANK, LAG, LEAD)
-- ✅ Package with specification and body
-- ✅ Comprehensive exception handling
-- ✅ Error logging and recovery mechanisms
-
-### **Testing Requirements:**
-- ✅ All procedures and functions tested
-- ✅ Edge cases validated
-- ✅ Performance verified
-- ✅ Test results documented
 
 ## 📁 Required Files for Submission
 
@@ -896,8 +854,6 @@ CREATE TABLE public_holidays (
     description     VARCHAR2(200)
 );
 ```
-[Click here to visit Google](https://www.google.com)
-
 
 Insert sample holidays:
 
@@ -1082,7 +1038,7 @@ END;
 
 ---
 
-# ✅ **TESTING (FINAL WORKING SCRIPTS)**
+# ✅ **TESTING)**
 
 **These NOW work correctly** (fixed errors you faced).
 
@@ -1134,13 +1090,7 @@ SET phone_number = '0788111111'
 WHERE patient_id = 1;
 ```
 
-💥 Expected:
 
-```
-ORA-20050: Operation blocked: Restricted day.
-```
-
----
 
 ### 📌 Check final audit logs
 
