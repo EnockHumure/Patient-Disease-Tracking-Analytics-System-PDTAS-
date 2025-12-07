@@ -107,7 +107,7 @@ The Patient Disease Tracking & Analytics System follows a structured workflow fr
 ---
 
 **Diagram:** Workflow design with analytics prioritization  
-[Here are the bpmn that highlights the overview of project](https://www.google.com)
+[Here are the bpmn that highlights the overview of project](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/Diagram/Patient%20Disease%20tracking%20dashboard.png)
 
 
 # Phase III: Logical Model Design
@@ -242,7 +242,7 @@ Create and configure the Oracle pluggable database for the Patient Disease Track
 
 ## 📁 Database Setup
 
-### **Naming Convention (As Required)**
+## **creation of pdb**
 
 **Final PDB Name:** `WED_27394_ENOCK_PDTAS_DB`
 
@@ -303,7 +303,10 @@ ALTER PLUGGABLE DATABASE WED_27394_ENOCK_PDTAS_DB SAVE STATE;
 
 -- Step 3: Switch to PDB
 ALTER SESSION SET CONTAINER = WED_27394_ENOCK_PDTAS_DB;
+```
+[Ccreation of pdb based ](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/all_screenshoot/Creation%20of%20pdb%201.png)
 
+```sql
 -- Step 4: Create Tablespaces
 CREATE TABLESPACE pdta_data 
 DATAFILE 'C:\dbms_oracle\oradata\XE\WED_27394_ENOCK_PDTAS_DB\pdta_data01.dbf'
