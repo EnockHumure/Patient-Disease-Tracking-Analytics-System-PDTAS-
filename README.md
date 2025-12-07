@@ -306,6 +306,8 @@ ALTER SESSION SET CONTAINER = WED_27394_ENOCK_PDTAS_DB;
 ```
 ![Ccreation of pdb based ](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/all_screenshoot/Creation%20of%20pdb%201.png)
 
+
+## creation of tablespaces
 ```sql
 -- Step 4: Create Tablespaces
 CREATE TABLESPACE pdta_data 
@@ -333,6 +335,7 @@ SELECT name, open_mode FROM v$pdbs;
 SELECT tablespace_name, status FROM dba_tablespaces;
 SELECT username, account_status FROM dba_users;
 ```
+![creation of table space](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/all_screenshoot/creation%20of%20table%20space.png)
 
 ### **2. Verification Script (`phase4_verify.sql`)**
 
@@ -357,7 +360,6 @@ WHERE tablespace_name LIKE 'PDTA%';
 ```
 [Click here to visit Google](https://www.google.com)
 [Click here to visit Google](https://www.google.com)
-## 👥 User Setup Documentation
 
 ### **Administrative User (`enock_admin`)**
 
@@ -408,13 +410,6 @@ WHERE tablespace_name LIKE 'PDTA%';
 | Single PDB | XE allows 3 PDBs total | Manage PDB count carefully |
 
 
-1. **Database:** PDB created and configured
-   [Click here to visit Google](https://www.google.com)
-3. **Users:** Application user with necessary privileges
-   [Click here to visit Google](https://www.google.com)
-5. **Tablespaces:** Optimized for table creation and data loading
-   [Click here to visit Google](https://www.google.com)
-
 ### **Connection Details for Phase V:**
 ```
 Host: localhost
@@ -427,7 +422,7 @@ Password: humure
 [Click here to visit Google](https://www.google.com)
 ---
 
-**Phase:** IV - Database Creation  
+**Phase:** IV - Database Creation ✅  
 
 
 
@@ -448,7 +443,8 @@ Verify the successful creation of all database tables, data integrity, and prope
 | `LAB_TECHNICIAN` | Laboratory test records | 5 |
 | `TREATMENT` | Medication and treatment history | 5 |
 | `DISEASE_STATS` | Analytics and disease metrics | 5 |
-
+  
+[Click here to visit Google](https://www.google.com)
 
 ### **1. Table Existence Check**
 ```sql
