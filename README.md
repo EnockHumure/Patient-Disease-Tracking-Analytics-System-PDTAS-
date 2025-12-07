@@ -107,8 +107,7 @@ The Patient Disease Tracking & Analytics System follows a structured workflow fr
 ---
 
 **Diagram:** Workflow design with analytics prioritization  
-[Here are the bpmn that highlights the overview of project](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/Diagram/Patient%20Disease%20tracking%20dashboard.png)
-https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/all_screenshoot/Creation%20of%20pdb%201.png
+![Here are the bpmn that highlights the overview of project](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/Diagram/Patient%20Disease%20tracking%20dashboard.png)
 
 
 # Phase III: Logical Model Design
@@ -305,7 +304,7 @@ ALTER PLUGGABLE DATABASE WED_27394_ENOCK_PDTAS_DB SAVE STATE;
 -- Step 3: Switch to PDB
 ALTER SESSION SET CONTAINER = WED_27394_ENOCK_PDTAS_DB;
 ```
-[Ccreation of pdb based ](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/all_screenshoot/Creation%20of%20pdb%201.png)
+![Ccreation of pdb based ](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/all_screenshoot/Creation%20of%20pdb%201.png)
 
 ```sql
 -- Step 4: Create Tablespaces
@@ -409,7 +408,6 @@ WHERE tablespace_name LIKE 'PDTA%';
 | Single PDB | XE allows 3 PDBs total | Manage PDB count carefully |
 
 
-
 1. **Database:** PDB created and configured
    [Click here to visit Google](https://www.google.com)
 3. **Users:** Application user with necessary privileges
@@ -492,13 +490,13 @@ WHERE table_name IN (
 
 ### **4. Data Volume Verification**
 ```sql
-SELECT COUNT(*) AS main_diseases_count FROM main_diseases;        -- Expected: 5
-SELECT COUNT(*) AS other_diseases_count FROM other_diseases;     -- Expected: 3
-SELECT COUNT(*) AS reception_count FROM reception;               -- Expected: 5
-SELECT COUNT(*) AS doctor_count FROM doctor;                     -- Expected: 5
-SELECT COUNT(*) AS lab_technician_count FROM lab_technician;     -- Expected: 5
-SELECT COUNT(*) AS treatment_count FROM treatment;               -- Expected: 5
-SELECT COUNT(*) AS disease_stats_count FROM disease_stats;       -- Expected: 5
+SELECT COUNT(*) AS main_diseases_count FROM main_diseases;        
+SELECT COUNT(*) AS other_diseases_count FROM other_diseases;     
+SELECT COUNT(*) AS reception_count FROM reception;               
+SELECT COUNT(*) AS doctor_count FROM doctor;                     
+SELECT COUNT(*) AS lab_technician_count FROM lab_technician;     
+SELECT COUNT(*) AS treatment_count FROM treatment;               
+SELECT COUNT(*) AS disease_stats_count FROM disease_stats;       
 ```
 
 ## 🔗 Foreign Key Integrity Tests
