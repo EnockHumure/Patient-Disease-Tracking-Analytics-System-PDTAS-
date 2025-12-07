@@ -45,6 +45,7 @@ This is a multi-phase individual capstone project centered on Oracle database de
 
 ## 🏛 Implementation Context
 
+[here are the pdf documents](https://www.google.com)
 
 # Phase II: Business Process Modeling
 
@@ -391,13 +392,6 @@ WHERE tablespace_name LIKE 'PDTA%';
 2. **Partitioning:** Consider partitioning for large tables (>1M rows)
 3. **Compression:** Enable table compression for historical data
 
-## ✅ Verification Checklist
-
-### **Pre-Creation:**
-- [ ] Oracle XE 21c installed and running
-- [ ] SYSDBA access available
-- [ ] Sufficient disk space (minimum 1GB free)
-- [ ] Backup of existing databases if any
 
 
 ## ⚠️ Known Limitations & Workarounds
@@ -444,7 +438,7 @@ Verify the successful creation of all database tables, data integrity, and prope
 | `TREATMENT` | Medication and treatment history | 5 |
 | `DISEASE_STATS` | Analytics and disease metrics | 5 |
   
-[Proff of creation of pdb](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/all_screenshoot/proff%20of%20the%20tables3.png)
+![Proff of creation of pdb](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/all_screenshoot/proff%20of%20the%20tables3.png)
 
 ### **1. Table Existence Check**
 ```sql
@@ -460,6 +454,7 @@ WHERE table_name IN (
     'DISEASE_STATS'
 );
 ```
+[table existence check up](all_screenshoot/showing the existing of tables .png)
 **Expected Result:** All 7 tables should be listed.
 
 ### **2. Column Structure Verification**
@@ -601,14 +596,18 @@ ORDER BY patient_count DESC;
 - `phase5_validation.sql` - This validation script
 
 ### **Expected Output Files:**
-- Screenshot of table creation success [Click here to visit Google](https://www.google.com)
+- queries table creation success
+[Creation of the reception tablesand insertation](pl_sql_script/reception.sql)
+ [creation of doctor tables and insertation of doctor](pl_sql_script/doctor.sql)
+[Creation of lab techenician and insert data](pl_sql_script/lab_technician.sql)
+[creation fo main tablesand insert data](pl_sql_script/main_diseases.sql)
+[creation of the other disease and insert data](pl_sql_script/other_diseases.sql)
+[Creation of disease statistics and view tables](pl_sql_script/disease_stats.sql)
+
+
+-  validation script execution
+-  [here are all validation  script ](pl_sql_script/validation_tables.sql)
   
-- Screenshot of data insertion results[Click here to visit Google](https://www.google.com)
-  
-- Screenshot of validation script execution[Click here to visit Google](https://www.google.com)
-  
--  of sample query results[
-  [ Click here to visit Google](https://www.google.com)
 
 ---
 
@@ -779,6 +778,10 @@ RANK() OVER (PARTITION BY disease_name ORDER BY visit_date) AS disease_rank,
 LAG(visit_date) OVER (ORDER BY visit_date) AS previous_visit,
 LEAD(visit_date) OVER (ORDER BY visit_date) AS next_visit
 ```
+[screenshot of window function rank](all_screenshoot/Window_function rank(2).png)
+[screenshot of window function dense rank](all_screenshoot/Window_function_dense rank.png)
+[window function by order by](all_screenshoot/window function_order by.png)
+[ screenshot of window function row number ](all_screenshoot/window_function_Row_number2.png)
 
 ### **Data Validation**
 - Phone number validation for Rwandan format (078, 079, 072, 073)
@@ -812,7 +815,7 @@ These rules ensure that employees **cannot perform DML** on restricted days and 
 Employees are NOT allowed to:
 
 * **INSERT**
-* **UPDATE**
+* **UPDATE** 
 * **DELETE**
 
 on:
@@ -850,7 +853,7 @@ VALUES (DATE '2025-01-01', 'New Year');
 INSERT INTO public_holidays (holiday_date, description)
 VALUES (DATE '2025-01-03', 'National Health Day');
 ```
-[Click here to visit Google](https://www.google.com)
+![here are screenshoot for holiday](all_screenshoot/holidays table2.png)
 
 ---
 
@@ -872,7 +875,7 @@ CREATE TABLE audit_log (
     sql_text        VARCHAR2(4000)
 );
 ```
-[Click here to visit Google](https://www.google.com)
+[the creation of audit_log](all_screenshoot/error_logs table2.png)
 
 
 ---
