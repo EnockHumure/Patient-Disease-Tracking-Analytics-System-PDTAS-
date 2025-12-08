@@ -4,12 +4,13 @@
 ## 🎓 Personal Information
 
 **Student:** Humure Enock  
-**ID:** 27394  
-**Program:** AUCA - IT - Software Engineering  
+** student ID:** 27394  
+**Program:**IT - Software Engineering  
 **Course:** INSY 8311 | Database Development with PL/SQL  
 **Faculty:** Information Technology - AUCA  
 **Lecturer:** Eric Maniraguha  
 **Group:** Wednesday(C)  
+
 **Project Title:** Patient Disease Tracking & Analytics System (PDTAS)
 
 
