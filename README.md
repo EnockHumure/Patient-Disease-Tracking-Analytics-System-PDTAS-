@@ -45,7 +45,7 @@ This is a multi-phase individual capstone project centered on Oracle database de
 
 ## 🏛 Implementation Context
 
-[here are the pdf documents](https://www.google.com)
+[here are the pdf documents](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/Document/final%20project%20pdf%20pl.pdf)
 
 # Phase II: Business Process Modeling
 
@@ -364,7 +364,6 @@ FROM dba_data_files
 WHERE tablespace_name LIKE 'PDTA%';
 ```
 
-[Click here to visit Google](https://www.google.com)
 
 
 
@@ -1188,17 +1187,14 @@ ORDER BY action_time DESC;
 
 # **PHASE VII**
 Got it! Here’s a simpler, more personal version that feels natural:
-
+[here is the power point presentation of the project](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/Document/power%20point%20presentation.pptx)
 ---
 
 💬 **Acknowledgment**
 I sincerely thank **Mr. Eric Maniraguha** for their guidance, support, and advice while We well studying this course .
 Your help made completing this system possible.
 
-📄 **License**
-This project is submitted as part of the **Capstone Project for Database Development with PL/SQL**, Academic Year 2024–2025, **Adventist University of Central Africa (AUCA)**.
 
-Got it! Here’s a simpler, more personal version that feels natural:
 
 ---
 ## 📚 References
