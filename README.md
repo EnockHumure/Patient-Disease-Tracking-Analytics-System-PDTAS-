@@ -1181,6 +1181,39 @@ ORDER BY action_time DESC;
 
 ![testing of the triggers](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/all_screenshoot/testing%20of%20the%20triggers%204.png)
 
+
+# **PHASE VII**
+Got it! Here’s a simpler, more personal version that feels natural:
+
+---
+
+💬 **Acknowledgment**
+I sincerely thank **Mr. Eric Maniraguha** for their guidance, support, and advice while We well studying this course .
+Your help made completing this system possible.
+
+📄 **License**
+This project is submitted as part of the **Capstone Project for Database Development with PL/SQL**, Academic Year 2024–2025, **Adventist University of Central Africa (AUCA)**.
+
+Got it! Here’s a simpler, more personal version that feels natural:
+
+---
+
+💬 **Acknowledgment**
+I sincerely thank **Mr. Eric Maniraguha** and the **IT Faculty at AUCA** for their guidance, support, and advice while I worked on this project. Your help made completing this system possible.
+
+📄 **License**
+This project is submitted as part of the **Capstone Project for Database Development with PL/SQL**, Academic Year 2024–2025, **Adventist University of Central Africa (AUCA)**.
+
+
+"Good health starts with proper tracking and care."
+
+
+---
+
+
+---
+
+
 ## 📋 Delivery Requirements
 
 **Course Details:**  
