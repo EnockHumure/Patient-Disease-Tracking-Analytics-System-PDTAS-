@@ -120,6 +120,7 @@ GROUP BY disease_name
 ORDER BY patient_count DESC;
 
 -- ======================================================
--- End of Phase V Validation Script
+-- End of  V Validation Script
 -- ======================================================
 COMMIT;
+
