@@ -953,7 +953,7 @@ BEGIN
 END;
 /
 ```
-[this is the screenshot of log audit ](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/all_screenshoot/Screenshot%20of%20triggers%204.png)
+![this is the screenshot of log audit ](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/all_screenshoot/AUDIT_LOGS%202.png)
 
 ---
 
@@ -1059,17 +1059,128 @@ END AFTER EACH ROW;
 END;
 /
 ```
+![here are the screenshot that shows the trigers ](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/all_screenshoot/Screenshot%20of%20triggers%204.png)
 
 ---
 
 # ✅ **TESTING)**
 
 ---
+```sql
 
+SET SERVEROUTPUT ON
+
+PROMPT =========================================
+PROMPT TEST 1: INSERT ON WEEKDAY (SHOULD FAIL)
+PROMPT =========================================
+
+BEGIN
+  INSERT INTO reception (first_name, last_name, gender, date_of_birth, phone_number, disease_name)
+  VALUES ('Test', 'User', 'Male', DATE '1990-01-01', '0788000000', 'Malaria');
+
+  DBMS_OUTPUT.PUT_LINE(' ERROR: Insert should have been blocked but was allowed!');
+EXCEPTION
+  WHEN OTHERS THEN
+    DBMS_OUTPUT.PUT_LINE('✅ EXPECTED ERROR: ' || SQLERRM);
+END;
+/
+
+PROMPT Checking audit log after weekday insert attempt...
+
+SELECT audit_id, username, action_type, success_flag, reason, action_time
+FROM audit_log
+ORDER BY action_time DESC;
+
+
+PROMPT =========================================
+PROMPT TEST 2: INSERT ON WEEKEND (SHOULD PASS)
+PROMPT =========================================
+
+-- ⚠️ Run this test manually on Saturday or Sunday
+
+BEGIN
+  INSERT INTO reception (first_name, last_name, gender, date_of_birth, phone_number, disease_name)
+  VALUES ('Happy', 'Weekend', 'Female', DATE '1995-05-05', '0788123456', 'Flu');
+
+  DBMS_OUTPUT.PUT_LINE('✅ SUCCESS: Weekend insert allowed.');
+EXCEPTION
+  WHEN OTHERS THEN
+    DBMS_OUTPUT.PUT_LINE(' ERROR: Weekend insert failed: ' || SQLERRM);
+END;
+/
+
+PROMPT Checking audit log after weekend insert attempt...
+
+SELECT audit_id, username, action_type, success_flag, reason, action_time
+FROM audit_log
+ORDER BY action_time DESC;
+
+
+PROMPT =========================================
+PROMPT TEST 3: UPDATE ON WEEKDAY (SHOULD FAIL)
+PROMPT =========================================
+
+BEGIN
+  UPDATE reception
+  SET phone_number = '0788111111'
+  WHERE patient_id = 1;
+
+  DBMS_OUTPUT.PUT_LINE(' ERROR: Update should have been blocked but was allowed!');
+EXCEPTION
+  WHEN OTHERS THEN
+    DBMS_OUTPUT.PUT_LINE('✅ EXPECTED ERROR: ' || SQLERRM);
+END;
+/
+
+PROMPT Checking audit log after weekday update attempt...
+
+SELECT audit_id, username, action_type, success_flag, reason, action_time
+FROM audit_log
+ORDER BY action_time DESC;
+
+
+PROMPT =========================================
+PROMPT TEST 4: DELETE ON WEEKDAY (SHOULD FAIL)
+PROMPT =========================================
+
+BEGIN
+  DELETE FROM reception
+  WHERE patient_id = 1;
+
+  DBMS_OUTPUT.PUT_LINE('ERROR: Delete should have been blocked but was allowed!');
+EXCEPTION
+  WHEN OTHERS THEN
+    DBMS_OUTPUT.PUT_LINE('✅ EXPECTED ERROR: ' || SQLERRM);
+END;
+/
+
+PROMPT Checking audit log after weekday delete attempt...
+
+SELECT audit_id, username, action_type, success_flag, reason, action_time
+FROM audit_log
+ORDER BY action_time DESC;
+
+
+PROMPT =========================================
+PROMPT FINAL AUDIT LOG SUMMARY
+PROMPT =========================================
+
+SELECT audit_id,
+       username,
+       action_type,
+       target_table,
+       target_pk,
+       success_flag,
+       reason,
+       TO_CHAR(action_time, 'YYYY-MM-DD HH24:MI:SS') AS action_time
+FROM audit_log
+ORDER BY action_time DESC;
+
+```
 
 ---
 
-![here are the screenshot that shows the trigers ](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/all_screenshoot/Screenshot%20of%20triggers%204.png)
+[testing of the triggers](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/all_screenshoot/testing%20of%20the%20triggers%204.png)
 
 ## 📋 Delivery Requirements
 
