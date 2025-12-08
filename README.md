@@ -454,7 +454,7 @@ WHERE table_name IN (
     'DISEASE_STATS'
 );
 ```
-[table existence check up](all_screenshoot/showing the existing of tables .png)
+![table existence check up](all_screenshoot/showing the existing of tables .png)
 **Expected Result:** All 7 tables should be listed.
 
 ### **2. Column Structure Verification**
@@ -773,10 +773,10 @@ RANK() OVER (PARTITION BY disease_name ORDER BY visit_date) AS disease_rank,
 LAG(visit_date) OVER (ORDER BY visit_date) AS previous_visit,
 LEAD(visit_date) OVER (ORDER BY visit_date) AS next_visit
 ```
-[screenshot of window function rank](all_screenshoot/Window_function rank(2).png)
-[screenshot of window function dense rank](all_screenshoot/Window_function_dense rank.png)
-[window function by order by](all_screenshoot/window function_order by.png)
-[ screenshot of window function row number ](all_screenshoot/window_function_Row_number2.png)
+- [screenshot of window function rank](all_screenshoot/Window_function rank(2).png)
+- [screenshot of window function dense rank](all_screenshoot/Window_function_dense rank.png)
+- [window function by order by](all_screenshoot/window function_order by.png)
+- [ screenshot of window function row number ](all_screenshoot/window_function_Row_number2.png)
 
 ### **Data Validation**
 - Phone number validation for Rwandan format (078, 079, 072, 073)
@@ -870,7 +870,7 @@ CREATE TABLE audit_log (
     sql_text        VARCHAR2(4000)
 );
 ```
-[the creation of audit_log](all_screenshoot/error_logs table2.png)
+![the creation of audit_log](all_screenshoot/error_logs table2.png)
 
 
 ---
@@ -975,7 +975,7 @@ BEGIN
             DBMS_STANDARD.SQLERRM
         );
 
-        RAISE_APPLICATION_ERROR(-20050, '❌ Operation blocked: Restricted day.');
+        RAISE_APPLICATION_ERROR(-20050, 'Operation blocked: Restricted day.');
     END IF;
 END;
 /
@@ -983,7 +983,7 @@ END;
 
 ---
 
-# **STEP 6 — COMPOUND TRIGGER (Audits All Successful DML)**
+# **STEP 6 — COMPOUND TRIGGER **
 
 ```sql
 CREATE OR REPLACE TRIGGER audit_reception
@@ -1023,8 +1023,6 @@ END;
 ---
 
 # ✅ **TESTING)**
-
-**These NOW work correctly** (fixed errors you faced).
 
 ---
 
