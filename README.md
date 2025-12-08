@@ -214,7 +214,7 @@ erDiagram
 5. **Security:** Role-based access control
    ## 📈 BI  diagram
    
-[Click here to visit Google](https://www.google.com)
+
 [Click here to visit Google](https://www.google.com)
 
 
@@ -359,7 +359,7 @@ SELECT file_name, tablespace_name, bytes/1024/1024 as size_mb, autoextensible
 FROM dba_data_files 
 WHERE tablespace_name LIKE 'PDTA%';
 ```
-[Click here to visit Google](https://www.google.com)
+
 [Click here to visit Google](https://www.google.com)
 
 
@@ -605,8 +605,9 @@ Develop PL/SQL procedures, functions, packages, and implement comprehensive test
 2. **`fn_disease_category`** - Classifies diseases as main or other
 3. **`fn_monthly_cases`** - Returns monthly case counts per disease
 4. **`fn_validate_phone`** - Validates Rwandan phone number format
+
+   ![this the screen shot that demostrate the compilation of function](all_screenshoot/Screenshot of the function 4.png)
    
-![this the screen shot that demostrate the compilation of function](all_screenshoot/Screenshot of the function 4.png)
 ### **Package Implementation**
 - **Package Name:** `hospital_pkg`
 - **Specification:** Public interface with all procedures and functions declared
