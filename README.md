@@ -305,7 +305,7 @@ ALTER PLUGGABLE DATABASE WED_27394_ENOCK_PDTAS_DB SAVE STATE;
 -- Step 3: Switch to PDB
 ALTER SESSION SET CONTAINER = WED_27394_ENOCK_PDTAS_DB;
 ```
-![Ccreation of pdb based ](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/all_screenshoot/Creation%20of%20pdb%201.png)
+![Creation of pdb based ](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/all_screenshoot/Creation%20of%20pdb%201.png)
 
 
 ## creation of tablespaces
@@ -606,7 +606,7 @@ Develop PL/SQL procedures, functions, packages, and implement comprehensive test
 3. **`fn_monthly_cases`** - Returns monthly case counts per disease
 4. **`fn_validate_phone`** - Validates Rwandan phone number format
 
-   ![this the screen shot that demostrate the compilation of function](all_screenshoot/Screenshot of the function 4.png)
+   ![this the screen shot that demostrate the compilation of function](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/all_screenshoot/Screenshot%20of%20the%20function%204.png)
    
 ### **Package Implementation**
 - **Package Name:** `hospital_pkg`
@@ -664,7 +664,7 @@ END hospital_pkg;
 END hospital_pkg;
 /
 
-![here are the screenshot that shows demostration of package](all_screenshoot/screenshot of package 4.png)
+![here are the screenshot that shows demostration of package](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/all_screenshoot/screenshot%20of%20package%204.png)
 ### **Window Functions Usage**
 ```sql
 -- Example window functions in analytics
@@ -673,16 +673,16 @@ RANK() OVER (PARTITION BY disease_name ORDER BY visit_date) AS disease_rank,
 LAG(visit_date) OVER (ORDER BY visit_date) AS previous_visit,
 LEAD(visit_date) OVER (ORDER BY visit_date) AS next_visit
 ```
-- ![screenshot of window function rank](all_screenshoot/Window_function rank(2).png)
-- ![screenshot of window function dense rank](all_screenshoot/Window_function_dense rank.png)
-- [!window function by order by](all_screenshoot/window function_order by.png)
-- ![ screenshot of window function row number ](all_screenshoot/window_function_Row_number2.png)
+- ![screenshot of window function rank](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/all_screenshoot/Window_function%20rank(2).png)
+- ![screenshot of window function dense rank](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/all_screenshoot/Window_function_dense%20rank.png)
+- [!window function by order by](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/all_screenshoot/window%20function_order%20by.png)
+- ![ screenshot of window function row number ](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/all_screenshoot/window_function_Row_number2.png)
 
 
 
 ---
 
-## 📄 README – Cursors Implementation (PL/SQL)
+##  Cursors Implementation 
 
 This project uses **explicit cursors** to handle multiple rows of data from the database.
 The cursors are opened using **OPEN**, data is read using **FETCH**, and closed properly using **CLOSE**.
@@ -695,7 +695,7 @@ Overall, cursor usage ensures accurate and efficient processing of patient track
 
 ---
 
-![this is the screenshot that shows the compilation of cursors](all_screenshoot/Screenshot of cursors 4.png)
+![this is the screenshot that shows the compilation of cursors](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/all_screenshoot/Screenshot%20of%20cursors%204.png)
 
 ### **Key Features Implemented**
 - Parameterized procedures with IN/OUT parameters
@@ -835,16 +835,6 @@ END log_error;
 - Patient record validation before operations
 
 
-## 📁 Required Files for Submission
-
-### **SQL Scripts:**
-- `hospital_pkg_spec.sql` - Package specification
-- `hospital_pkg_body.sql` - Package body with all procedures
-- `error_logs_table.sql` - Error logging table creation
-- `phase6_tests.sql` - Complete test script
-- `phase6_validation.sql` - Validation queries
-
-
 ---
 
 # ✅ **PHASE VII – Advanced Programming & Auditing (FULL + CLEAN VERSION)**
@@ -898,7 +888,7 @@ VALUES (DATE '2025-01-01', 'New Year');
 INSERT INTO public_holidays (holiday_date, description)
 VALUES (DATE '2025-01-03', 'National Health Day');
 ```
-![here are screenshoot for holiday](all_screenshoot/holidays table2.png)
+![here are screenshoot for holiday](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/all_screenshoot/holidays%20table2.png)
 
 ---
 
@@ -920,7 +910,7 @@ CREATE TABLE audit_log (
     sql_text        VARCHAR2(4000)
 );
 ```
-![the creation of audit_log](all_screenshoot/error_logs table2.png)
+
 
 
 ---
@@ -963,7 +953,7 @@ BEGIN
 END;
 /
 ```
-[this is the screenshot of log audit ](all_screenshoot/AUDIT_LOGS 2.png)
+[this is the screenshot of log audit ](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/all_screenshoot/Screenshot%20of%20triggers%204.png)
 
 ---
 
@@ -1076,66 +1066,10 @@ END;
 
 ---
 
-###  Test 1 — Insert on Weekday (Should FAIL)
-
-```sql
-INSERT INTO reception (first_name, last_name, gender, date_of_birth, phone_number, disease_name)
-VALUES ('Test', 'User', 'Male', DATE '1990-01-01', '0788000000', 'Malaria');
-```
-
-💥 Expected:
-
-```
-ORA-20050: Operation blocked: Restricted day.
-```
-
-Audit check:
-
-```sql
-SELECT * FROM audit_log ORDER BY action_time DESC;
-```
-
-Shows:
-`success_flag = 'N'`
 
 ---
 
-### ✅ Test 2 — Insert on Weekend (Should PASS)
-
-Run this on **Saturday/Sunday**:
-
-```sql
-INSERT INTO reception (first_name, last_name, gender, date_of_birth, phone_number, disease_name)
-VALUES ('Happy', 'Weekend', 'Female', DATE '1995-05-05', '0788123456', 'Flu');
-```
-
-Audit shows:
-`success_flag = 'Y'`
-
----
-
-### ❌ Test 3 — Update on Restricted Day (FAILS)
-
-```sql
-UPDATE reception
-SET phone_number = '0788111111'
-WHERE patient_id = 1;
-```
-
-
-
-### 📌 Check final audit logs
-
-```sql
-SELECT audit_id, username, action_type, target_table, target_pk,
-       success_flag, reason, action_time
-FROM audit_log
-ORDER BY action_time DESC;
-```
-
----
-
-![here are the screenshot that shows the trigers ](all_screenshoot/Screenshot of triggers 4.png)
+![here are the screenshot that shows the trigers ](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/all_screenshoot/Screenshot%20of%20triggers%204.png)
 
 ## 📋 Delivery Requirements
 
