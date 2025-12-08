@@ -589,20 +589,15 @@ ORDER BY patient_count DESC;
 2. Run as user: `patient_track`
 
 
-### **Phase V Scripts:**
 
-- `phase5_create_tables.sql` - Table creation script
-- `phase5_insert_data.sql` - Data insertion script
-- `phase5_validation.sql` - This validation script
-
-### **Expected Output Files:**
+### **Expected Phase V Scripts :**
 - queries table creation success
-[Creation of the reception tablesand insertation](pl_sql_script/reception.sql)
- [creation of doctor tables and insertation of doctor](pl_sql_script/doctor.sql)
-[Creation of lab techenician and insert data](pl_sql_script/lab_technician.sql)
-[creation fo main tablesand insert data](pl_sql_script/main_diseases.sql)
-[creation of the other disease and insert data](pl_sql_script/other_diseases.sql)
-[Creation of disease statistics and view tables](pl_sql_script/disease_stats.sql)
+- [Creation of the reception tablesand insertation](pl_sql_script/reception.sql)
+- [creation of doctor tables and insertation of doctor](pl_sql_script/doctor.sql)
+- [Creation of lab techenician and insert data](pl_sql_script/lab_technician.sql)
+- [creation fo main tablesand insert data](pl_sql_script/main_diseases.sql)
+- [creation of the other disease and insert data](pl_sql_script/other_diseases.sql)
+- [Creation of disease statistics and view tables](pl_sql_script/disease_stats.sql)
 
 
 -  validation script execution
