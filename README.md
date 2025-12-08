@@ -1198,10 +1198,17 @@ This project is submitted as part of the **Capstone Project for Database Develop
 Got it! Here’s a simpler, more personal version that feels natural:
 
 ---
+## 📚 References
 
+1. Oracle Corporation. (2021). *Oracle Database 21c Documentation*. Retrieved from https://docs.oracle.com/en/database/oracle/oracle-database/21/
+2. Feuerstein, S., & Pribyl, B. (2021). *Oracle PL/SQL Programming* (7th ed.). O'Reilly Media.
+3. Connolly, T., & Begg, C. (2015). *Database Systems: A Practical Approach to Design, Implementation, and Management* (6th ed.). Pearson Education.
+4. Elmasri, R., & Navathe, S. B. (2016). *Fundamentals of Database Systems* (7th ed.). Pearson.
+5. Date, C. J. (2019). *Database Design and Relational Theory: Normal Forms and All That Jazz* (2nd ed.). Apress.
 💬 **Acknowledgment**
 I sincerely thank **Mr. Eric Maniraguha** and the **IT Faculty at AUCA** for their guidance, support, and advice while I worked on this project. Your help made completing this system possible.
 
+---
 📄 **License**
 This project is submitted as part of the **Capstone Project for Database Development with PL/SQL**, Academic Year 2024–2025, **Adventist University of Central Africa (AUCA)**.
 
