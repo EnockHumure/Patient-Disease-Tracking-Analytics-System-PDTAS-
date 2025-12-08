@@ -844,8 +844,7 @@ Add restriction rules + auditing to the *health sector disease tracking system* 
 These rules ensure that employees **cannot perform DML** on restricted days and that **all actions are logged**.
 
 ---
-
-# ✅ **BUSINESS RULE **
+## ✅ *Hospital  RULE **
 
 Employees are NOT allowed to:
 
@@ -862,8 +861,8 @@ on:
 If someone tries → the system **blocks** the action + writes into **audit_log**.
 
 ---
+### ✅ **PHASE VII IMPLEMENTATION STEPS**
 
-# ✅ **PHASE VII IMPLEMENTATION STEPS (Final Clean Version)**
 
 ---
 
@@ -1180,7 +1179,7 @@ ORDER BY action_time DESC;
 
 ---
 
-[testing of the triggers](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/all_screenshoot/testing%20of%20the%20triggers%204.png)
+![testing of the triggers](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/all_screenshoot/testing%20of%20the%20triggers%204.png)
 
 ## 📋 Delivery Requirements
 
