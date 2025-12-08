@@ -338,6 +338,7 @@ SELECT username, account_status FROM dba_users;
 ```
 ![creation of table space](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/all_screenshoot/creation%20of%20table%20space.png)
 
+![creation of the table space OEM](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/oem/TABLE%20SPACE%20OEM.png)
 ### **2. Verification Script (`phase4_verify.sql`)**
 
 ```sql
