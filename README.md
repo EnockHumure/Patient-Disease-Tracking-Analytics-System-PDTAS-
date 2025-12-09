@@ -188,35 +188,16 @@ erDiagram
 
 ## 📈 BI Considerations
 
-### **Fact vs Dimension Tables**
-- **Fact Table:** `disease_stats` (measures: total_cases, new_cases)
-- **Dimension Tables:** `reception`, `doctor`, `lab_technician`, `treatment`, `main_diseases`
 
-### **Slowly Changing Dimensions**
-- **Type 1 (Overwrite):** Doctor specialization changes
-- **Type 2 (Historical):** Patient disease classification changes
-- **Type 3 (Limited History):** Disease priority status changes
-
-### **Aggregation Levels**
-- **Daily:** New case counts
-- **Weekly/Monthly:** Trend analysis
-- **Yearly:** Public health reporting
-- **Roll-up:** Disease → Category → System-wide
 
 ### **Audit Trail Design**
 - Separate `audit_log` table (Phase VII)
 - Track: user, action, table, record_id, timestamp
 - Support rollback and compliance reporting
 
-## 🔧 Design Assumptions
 
-1. **Data Volume:** 100-500 patients per main table
-2. **Concurrency:** Multiple concurrent users (reception, doctors, lab)
-3. **Retention:** 5+ years of historical data
-4. **Performance:** Sub-second response for dashboard queries
-5. **Security:** Role-based access control
    ## 📈 BI  diagram
-   
+   this is the diagram business intelligent that shows how disease is spreaded  
 
 [Click here to visit Google](https://www.google.com)
 
