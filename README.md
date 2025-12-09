@@ -199,7 +199,7 @@ erDiagram
    ## 📈 BI  diagram
    this is the diagram business intelligent that shows how disease is spreaded  
 
-[Click here to visit Google](https://www.google.com)
+![this is how the diagram of the bi is look like for the project ](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/BI%20of%20the%20project/power%20bi%20disease_statistics.png)
 
 
 ## 📊 Schema Summary
@@ -1169,7 +1169,13 @@ ORDER BY action_time DESC;
 
 # **PHASE VII**
 Got it! Here’s a simpler, more personal version that feels natural:
+
 [here is the power point presentation of the project](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/Document/power%20point%20presentation.pptx)
+
+BI used was a power bi for checking data easly 
+![this is the power bi used for analysing the databased on how the disease is being spread based over the month](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/BI%20of%20the%20project/bi%20based%20on%20the%20monthly%20data.png)
+
+![this is the power bi used for analysing the databased on how the disease is being spread based over the month](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/BI%20of%20the%20project/bi%20based%20on%20the%20monthly.png)
 ---
 
 💬 **Acknowledgment**
@@ -1209,6 +1215,6 @@ This project is submitted as part of the **Capstone Project for Database Develop
 - **Course:** Database Development with PL/SQL (INSY 8311)  
 - **Academic Year:** 2025-2026 | Semester: I 
 - **Institution:** Adventist University of Central Africa (AUCA)  
-- **Project Completion Date:** December 7, 2025
+- **Project Completion Date:** December 9, 2025
 
 
