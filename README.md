@@ -1173,6 +1173,7 @@ Got it! Here’s a simpler, more personal version that feels natural:
 [here is the power point presentation of the project](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/Document/power%20point%20presentation.pptx)
 
 BI used was a power bi for checking data easly 
+as an inovation of the project where we will track the spread of disease using the diagram 
 ![this is the power bi used for analysing the databased on how the disease is being spread based over the month](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/BI%20of%20the%20project/bi%20based%20on%20the%20monthly%20data.png)
 
 ![this is the power bi used for analysing the databased on how the disease is being spread based over the month](https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-/blob/main/BI%20of%20the%20project/bi%20based%20on%20the%20monthly.png)
